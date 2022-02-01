@@ -1,2 +1,25 @@
-# pcap-file-analyzer
-Given a PCAP file with a trace of packets, this tool effectively assignes a unique integer for each unique 5-tuple header. The list of integers represent the packets' temporal locality and can be saved as a textual file. The tool can also be used to extract the inter-packet delay (in usec) and packet sizes (in bytes) from the PCAP file.
+# Introduction
+
+This tool analyzes [PCAP](https://en.wikipedia.org/wiki/Pcap) files. It extracts 5-tuples, inter-packet delays, and packet sizes from the given PCAP files, and saves them all in a textual formal that can be easily read and used in [packet classification benchmarks](https://alonrashelbach.com/2021/12/20/benchmarking-packet-classification-algorithms).
+
+# Prerequisites
+* A Linux operating system (also WSL)
+* libpcap-dev (`sudo apt install libpcap-dev`)
+* GNU Make, GCC, G++
+
+* How to use
+```bash
+# Download submodules
+./build.sh
+# Compile
+make
+# Run with help message
+./bin/util-pcap-analyzer.exe --help
+```
+
+# Others
+If you happen to use this tool for an academic paper, please cite *Scaling Open vSwitch with a Computational Cache* (USENIX, NSDI 2022).
+
+[MIT License](LICENSE).
+
+Code contributions and bug fixes are welcome.
