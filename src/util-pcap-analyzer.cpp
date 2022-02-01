@@ -56,8 +56,10 @@ static arguments args[] = {
                                         "file"},
 {"window",             0,0,  "3000000", "(Mode Locality:Analyze) window size"},
 {"step",               0,0,  "800000",  "(Mode Locality:Analyze) step size"},
-{NULL,                 0, 0, NULL,      "Utils for generating and analyzing "
-                                        "packet traces."}
+{NULL,                 0, 0, NULL,      "Analyzes PCAP files. Extracts "
+                                        "5-tuples locality, packet sizes, and "
+                                        "inter-packet delays. Zipf locality "
+                                        "support."}
 };
 
 /**
