@@ -1,7 +1,7 @@
 #!/bin/bash
 
-echo "Fetching libcommon..."
-git submodule update --init
-
-echo "Done. Use GNU Make"
+mkdir build 2>/dev/null
+cd build
+cmake -S .. -B .
+cmake --build . -j
 

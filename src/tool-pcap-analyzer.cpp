@@ -12,7 +12,7 @@
 #include <string.h>
 #include <pthread.h>
 
-#include "libcommon/lib/arguments.h"
+#include "arguments.h"
 #include "log.h"
 #include "zipf.h"
 #include "pcap-utils.h"
